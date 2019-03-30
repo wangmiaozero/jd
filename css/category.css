@@ -1,0 +1,127 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.ct_layout{
+    width: 100%;
+    height: 100%;
+}
+/* 头部样式 */
+.ct_header{
+    width: 100%;
+    height: 50PX;
+    border: 1px solid #ccc;
+    position: absolute;
+    background-color: #eee;
+}
+.ct_back,
+.ct_menu{
+    width: 49px;
+    height: 49px;
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    background-size: 200px 200px;
+    padding: 14px;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+.ct_back{
+    left: 0;
+    background-position: -20px 0px;
+}
+.ct_menu{
+    right: 0;
+    background-position: -60px 0px;
+}
+.ct_search{
+    width: 100%;
+    height: 100%;
+    padding: 0 60px;
+}
+.ct_search > input{
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #666;
+    padding-left: 5px;
+}
+/* 主体内容模块 */
+/* left */
+.ct_content{
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+}
+.ct_left{
+   width: 100px;
+   height: 100%;
+   float: left;
+   overflow: hidden;
+   position: relative;
+}
+.ct_left ul{
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.ct_left li{
+    height: 50px;
+    width: 100%;
+    background-color: #eee;
+}
+.ct_left li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #333;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 50px;
+    text-align: center;
+}
+.ct_left li.active a{
+    color: #e92322;
+    background-color: #fff;
+    border-right: none;
+    border-bottom: none;
+}
+/* right */
+.ct_right{
+    height: 100%;
+    display: flex;
+    margin-left: 100px;
+    flex-direction: column;
+}
+.ct_right > .ct_rImg {
+    width: 100%;
+    display: block;
+}
+.ct_right > .ct_rImg >img{
+    width: 100%;
+    display: block;
+}
+.ct_right > h3{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  border-bottom: 1px solid #ccc;  
+  margin:15px 0;
+}
+/* 商品区 */
+.ct_hotCategory{
+    width: 100%;
+    /* flex: 1; */
+   overflow: hidden; 
+   position: relative;
+
+}
+.ct_hotCategory ul li{
+    float: left;
+    text-align: center;
+    width: 33.33%;
+}

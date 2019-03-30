@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            background:linear-gradient(to right, red,blue);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div=document.querySelector("div");
+        var startX,startY,moveX,moveY,distanceX,distanceY;
+        // 开始触摸
+        div.addEventListener("touchstart",function(e){
+            startX=e.targetTouches[0].clientX;
+            startY=e.targetTouches[0].clientY;
+
+        })
+        // 触摸滑动 持续触发
+        div.addEventListener("touchmove",function(e){
+            moveX=e.targetTouches[0].clientX;
+            moveY=e.targetTouches[0].clientY;
+            distanceX=moveX-startX;
+            distanceY=moveY-startY;
+            div.style.transform="translate("+distanceX+"px,"+distanceY+"px)";
+        });
+        // 触摸结束
+        div.addEventListener("touchend",function(e){
+
+        })
+    </script>
+</body>
+</html>
